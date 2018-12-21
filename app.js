@@ -1,20 +1,21 @@
 $(document).ready(function(){
-  console.log('jQuery loaded');
-
-  // write to local storage from input when button save clicked
-  $('.btn-submit').on('click', function(){
-    localStorage.setItem('inputFieldValue', $('.text-entry').val());
-    var myItemInStorage = localStorage.getItem('inputFieldValue');
-    console.log('myItemInStorage', myItemInStorage);
-
-    // display the value here
-    $('.list-display-field').text(myItemInStorage); // ??
-
-  });
-
-  // delete from local storage when delete button clicked
-  $('.btn-delete').on('click', function(){
-    localStorage.removeItem('inputFieldValue');
-  });
-
+  //user defined values 
+  var saveValues = function(){
+    var array = [];
+    var lsNames = localStorage.getItem('lsValue') 
+    if (!lsNames){ lsNames = '';}//null case 
+    array = lsNames.split(',');
+    array.push(document.getElementById('lsValue').value);
+    lsNames = array.join(',');//comma side effect from null case 
+    localStorage.setItem('lsValue', lsNames);
+    showValues();
+  } //show stored values 
+  var showValues = function() {
+    var ls = localStorage.getItem('lsValue');
+    document.getElementById('list-display-field').innerHTML = "Memory: " + ls.slice(1);
+  } 
+  //on click functions 
+  $('.btn-submit').on('click', function(){saveValues()});// write to local storage from input when button save clicked
+  $('.btn-delete-all').on('click', function(){localStorage.setItem('lsValue','');showValues()});// delete from local
+  $('.btn-memory').on('click', function(){showValues()});//memory button
 });
