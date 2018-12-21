@@ -10,21 +10,24 @@ Create Read Update Delete using localStorage with JS, HTML and CSS
 - [x] Write to local storage
 - [x] Read from local storage
 - [x] Edit local storage
-    - [ ] What about if we have more than one value?
-    - [ ] how do we add multiple values?
-        - [ ] maybe use an array?
-        - [ ] maybe use multiple keys? create new keyname each time
+    - [x] What about if we have more than one value?
+    - [x] how do we add multiple values?
+        - [x] maybe use an array?
+        - [-] maybe use multiple keys? create new keyname each time
 
 - [x] Delete local storage
     - [x] delete button storage.removeItem()
-    - [ ] delete all storage.clear()
+    - [x] delete all storage.clear()
 - [x] Display stored value in proper div
 
 ### Next Sprint (what are we trying to code)
-Examples: Replace with your own.
-- [ ] animate when new data is added
-- [ ] color code the data by timestape (older more greyed out)
-- [ ] Read from yelp api to get good bagel advice in a city
-- [ ] save my local storage to a remote storage for back up
+<!-- Examples: Replace with your own. -->
+- [x] create a header for your Christmas wish list / color code
+- [x] create rows and columns in your table
+- [x] add name, color, size, price
+- [x] style it so the list comes on the right rather than bottom
+- [x] be able to add and contents reset in the text bars
+- [x] be able to edit
+- [ ] be able to delete - once delete is pressed, prompt pops up assuring you want to delete
 
 - [ ] Optional: Host on repl.it (html,css, js)
