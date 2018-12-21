@@ -60,9 +60,9 @@ function updateList(itemsInWishList) {
 }
 
 function onDelete(td) {
-   if (alert('Are you sure you want to remove item from wishlist?')) {
+   if (confirm('Are you sure you want to remove item from wishlist?')) {
       row = td.parentElement.parentElement
-      document.getElementById("productName").deleteRow(row.rowIndex);
+      document.getElementById("wishList").deleteRow(row.rowIndex);
       resetList();
    }
 }
