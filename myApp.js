@@ -22,6 +22,7 @@ function includedItems() {
 function insertNewItem(data) {
    var table = document.getElementById("wishList").getElementsByTagName('tbody')[0];
    var newRow = table.insertRow(table.length);
+   newRow.id='item-' + table.children.length;
    cell1 = newRow.insertCell(0);
    cell1.innerHTML = data.productName;
    cell2 = newRow.insertCell(1);
